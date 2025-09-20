@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python -m src.app.runner
+    env_file:
+      - .env
+    restart: unless-stopped
