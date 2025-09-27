@@ -31,6 +31,7 @@ class Settings(BaseSettings):
         SYMBOL_BTC (str): Символ BTC (по умолчанию BTCUSDT).
         TIMEFRAME (str): Таймфрейм анализа (по умолчанию 1m).
     """
+
     BINANCE_API_KEY: str | None = None
     BINANCE_API_SECRET: str | None = None
     BINANCE_WS_URL: str = Field(default="wss://fstream.binance.com/stream")
@@ -45,6 +46,7 @@ class Settings(BaseSettings):
     WINDOW_REG: int = 240
     WINDOW_WARMUP: int = 120
     WINDOW_CUM: int = 60
+    RESIDUAL_WINDOW: int = 60
     EWMA_LAMBDA: float = 0.94
     THRESHOLD_PCT: float = 0.01
     HYSTERESIS_PCT: float = 0.002
